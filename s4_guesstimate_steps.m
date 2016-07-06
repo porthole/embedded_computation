@@ -1,13 +1,16 @@
-﻿% Guess the number of steps
+﻿%Estimate the number of steps
+%Each peak in mag corresponds to a step
+%So, count the number of peaks
 
-%set threshold to std
+%set peak heguht threshold to std
 minPeakHeightth = std(magNoG);
 
 %how many steps per sec?
 %seperate peaks by x samples to avoid multiple detections per step
-peakd = floor(fs/4);
+%Q?
+peakd = floor(fs/4)
 
-[pks, locs]=findpeaks(magNoG,"DoubleSided", "MinPeakHeight", minPeakHeightth,"MinPeakDistance",peakd,"DoubleSided");
+[pks, locs]=findpeaks(magNoG, "MinPeakHeight", minPeakHeightth,"MinPeakDistance",peakd,"DoubleSided");
 
 %drop the negative peaks
 locs=locs(pks>0);

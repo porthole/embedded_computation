@@ -9,7 +9,7 @@ clc;
 
 
 %use accelerometer meter from play store to collect data
-%load the data into workplace
+%load the data into workspace
 s1_load_data
 
 %plot the data to better undestand it 

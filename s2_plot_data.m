@@ -9,9 +9,10 @@ plot(t, z,'g');
 legend('X', 'Y', 'Z');
 xlabel('Relative time (s)');
 ylabel('Acceleration (m/s^2)');
+grid on
 
 %let's get some info about the data:
 %what is the sampling time?
 %Q
-dt=diff(t); 
-fs = 1/mean(dt)
+%dt=diff(t); 
+%fs = 1/mean(dt)

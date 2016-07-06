@@ -6,13 +6,17 @@ figure;
 plot(t, mag);
 xlabel('Time (s)');
 ylabel('Acceleration (m/s^2)');
+title('Magnitude of Acceleration')
+grid on
 
 %Detrend the data
 %Remove mean and get rid of G
 %QQQ
 magNoG = mag - mean(mag);
+
 figure;
 plot(t, magNoG);
 xlabel('Time (s)');
 ylabel('Acceleration (m/s^2)');
-
+grid on
+title('Magnitude of Detrended Acceleration')
